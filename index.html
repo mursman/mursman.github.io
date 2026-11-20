@@ -45,7 +45,10 @@
   .avail{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;background:#fdf6e3;border:1px solid #f3e3b3;border-radius:999px;padding:6px 14px;font-size:13px;font-weight:500;color:#7a6414}
   .avail i{width:9px;height:9px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.18)}
   .tile-name h1{font-size:clamp(52px,7vw,76px);line-height:1;font-weight:800;letter-spacing:-2px;margin:22px 0 6px}
-  .tile-name h1 .dot{background:var(--grad-hero);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .tile-name h1 .dot{display:inline-block;background:linear-gradient(92deg,#ff8a3d,#ff5c8a,#7c5cff,#3d8bff,#12b981,#ffb03d,#ff8a3d);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;transform-origin:center bottom;animation:dotpulse 1.8s ease-in-out infinite,dotshift 5s linear infinite}
+  @keyframes dotpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.45)}}
+  @keyframes dotshift{0%{background-position:0% 50%}100%{background-position:300% 50%}}
+  @media (prefers-reduced-motion: reduce){.tile-name h1 .dot{animation:none}}
   .tile-name .role{font-size:clamp(19px,2.6vw,24px);font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;line-height:1.3}
   .tile-name .role .g1{background:var(--grad-hero);-webkit-background-clip:text;background-clip:text;color:transparent}
   .tile-name .role .g2{background:var(--grad-cool);-webkit-background-clip:text;background-clip:text;color:transparent}
