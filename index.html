@@ -44,7 +44,17 @@
   .tile-name{grid-column:span 2;grid-row:span 2;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:center}
   .avail{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;background:#fdf6e3;border:1px solid #f3e3b3;border-radius:999px;padding:6px 14px;font-size:13px;font-weight:500;color:#7a6414}
   .avail i{width:9px;height:9px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.18)}
-  .tile-name h1{font-size:clamp(52px,7vw,76px);line-height:1;font-weight:800;letter-spacing:-2px;margin:22px 0 6px}
+  .tile-name h1{font-size:clamp(40px,5.4vw,64px);line-height:1.05;font-weight:800;letter-spacing:-2px;margin:22px 0 6px}
+  .anim-name .ins{display:inline-grid;grid-template-columns:0fr;transition:grid-template-columns 1.05s cubic-bezier(.22,1,.36,1);vertical-align:bottom}
+  .anim-name.expanded .ins{grid-template-columns:1fr}
+  .anim-name .inw{overflow:hidden;min-width:0;white-space:nowrap;display:inline-block}
+  .anim-name .l{display:inline-block;opacity:0;transform:translateY(.1em);background:linear-gradient(92deg,#ff8a3d,#ff5c8a 55%,#7c5cff);-webkit-background-clip:text;background-clip:text;color:transparent;transition:opacity .45s ease,transform .45s ease}
+  .anim-name.expanded .l{opacity:1;transform:translateY(0)}
+  .anim-name .d1{transition-delay:.10s}.anim-name .d2{transition-delay:.17s}.anim-name .d3{transition-delay:.24s}.anim-name .d4{transition-delay:.31s}.anim-name .d5{transition-delay:.38s}
+  .anim-name .d6{transition-delay:.48s}.anim-name .d7{transition-delay:.55s}.anim-name .d8{transition-delay:.62s}
+  .anim-name .gap{display:inline-block;width:0;transition:width 1.05s cubic-bezier(.22,1,.36,1)}
+  .anim-name.expanded .gap{width:.27em}
+  @media (prefers-reduced-motion: reduce){.anim-name .ins,.anim-name .gap,.anim-name .l{transition:none}}
   .tile-name h1 .dot{display:inline-block;background:linear-gradient(92deg,#ff8a3d,#ff5c8a,#7c5cff,#3d8bff,#12b981,#ffb03d,#ff8a3d);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;transform-origin:center bottom;animation:dotpulse 1.8s ease-in-out infinite,dotshift 5s linear infinite}
   @keyframes dotpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.45)}}
   @keyframes dotshift{0%{background-position:0% 50%}100%{background-position:300% 50%}}
@@ -192,7 +202,7 @@
   <div class="bento">
     <div class="tile tile-name">
       <span class="avail"><i></i>Available for new work</span>
-      <h1>mursman<span class="dot">.</span></h1>
+      <h1 class="anim-name" aria-label="Murshedur Rahman"><span aria-hidden="true"><span class="seg">murs</span><span class="ins"><span class="inw"><span class="l d1">h</span><span class="l d2">e</span><span class="l d3">d</span><span class="l d4">u</span><span class="l d5">r</span></span></span><span class="gap"></span><span class="ins"><span class="inw"><span class="l d6">R</span><span class="l d7">a</span><span class="l d8">h</span></span></span><span class="seg">man</span><span class="dot">.</span></span></h1>
       <div class="role">I paint <span class="g1">portraits</span>. I build <span class="g2">apps</span>.</div>
       <p>Pet portrait designer hand-painting realistic oil-style portraits since 2019 — and indie developer designing and shipping my own Android apps, end to end.</p>
       <div class="cta">
@@ -389,6 +399,14 @@
 <script>
   var t = document.getElementById('mtrack');
   t.innerHTML += t.innerHTML;
+  var nm = document.querySelector('.anim-name');
+  if (nm && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var cycleName = function () {
+      nm.classList.add('expanded');
+      setTimeout(function () { nm.classList.remove('expanded'); }, 4000);
+    };
+    setTimeout(function () { cycleName(); setInterval(cycleName, 7800); }, 2600);
+  }
 </script>
 </body>
 </html>
