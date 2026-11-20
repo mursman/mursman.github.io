@@ -90,7 +90,9 @@
   .tile-stats .st{text-align:center}
   .tile-stats .st b{display:block;font-size:24px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800}
   .tile-stats .st small{color:#bdb4a0;font-size:12.5px}
-  .tile-stats .st b em{font-style:normal;background:var(--grad-hero);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .tile-stats .st b em{font-style:normal;background:linear-gradient(90deg,#ff8a3d,#ff5c8a,#7c5cff,#3d8bff,#12b981,#ffb03d,#ff8a3d);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gradslide 9s linear infinite}
+  @keyframes gradslide{from{background-position:100% 0}to{background-position:0% 0}}
+  @media (prefers-reduced-motion: reduce){.tile-stats .st b em{animation:none}}
   .tile-social{background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;justify-content:center;gap:10px}
   .tile-social a{font-weight:600;font-size:15.5px;display:flex;justify-content:space-between;align-items:center}
   .tile-social a span{color:#ff5c8a}
@@ -232,7 +234,7 @@
       <small>hand-painted in Photoshop</small>
     </div>
     <div class="tile tile-stats">
-      <div class="st"><b><em>Thousands</em></b><small>portraits delivered</small></div>
+      <div class="st"><b><em>Thousands</em></b><small>of portraits delivered</small></div>
       <div class="st"><b>1,000+</b><small>Google Play installs</small></div>
       <div class="st"><b>4</b><small>products shipped solo</small></div>
     </div>
