@@ -125,6 +125,7 @@
     .tile-name,.tile-stats{grid-column:span 1}
   }
 
+  .marquee-clip{overflow:hidden}
   .marquee{background:var(--ink);color:#fff;overflow:hidden;padding:14px 0;white-space:nowrap;width:110%;margin-left:-5%;transform:rotate(-1.2deg)}
   .marquee .track{display:inline-block;animation:scroll 28s linear infinite;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:15px;letter-spacing:2px;text-transform:uppercase}
   .marquee .track span{margin:0 24px}
@@ -340,10 +341,11 @@
   </div>
 </div>
 
-<div class="marquee" aria-hidden="true">
+<div class="marquee-clip"><div class="marquee" aria-hidden="true">
   <div class="track" id="mtrack">
     <span>Digital oil painting</span><b>✦</b><span>Photoshop</span><b>✦</b><span>Illustrator</span><b>✦</b><span>Template design</span><b>✦</b><span>Android</span><b>✦</b><span>Product design</span><b>✦</b><span>AI-directed builds</span><b>✦</b><span>UI design</span><b>✦</b>
   </div>
+</div>
 </div>
 
 <section id="work">
