@@ -167,13 +167,14 @@
   .wlink{display:inline-flex;align-items:center;gap:7px;padding:11px 17px;border-radius:12px;border:1.5px solid rgba(255,255,255,.55);color:#fff;font-weight:700;font-size:14.5px;transition:background .15s ease}
   .wlink:hover{background:rgba(255,255,255,.15)}
   .toolgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;width:min(450px,100%)}
-  .ttool{background:rgba(255,255,255,.13);border:1.5px solid rgba(255,255,255,.28);border-radius:18px;padding:17px 6px 13px;display:flex;flex-direction:column;align-items:center;gap:9px;color:#fff;box-shadow:0 14px 28px rgba(6,60,45,.25)}
+  .ttool{background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.24);border-radius:18px;padding:17px 6px 13px;display:flex;flex-direction:column;align-items:center;gap:9px;color:#fff;text-decoration:none;box-shadow:0 14px 28px rgba(0,20,14,.35);transition:transform .16s ease,background .16s ease}
+  .ttool:hover{transform:translateY(-3px);background:rgba(255,255,255,.19)}
   .ttool svg{width:31px;height:31px}
   .ttool span{font-size:11px;font-weight:700;text-align:center;line-height:1.3}
   @media (max-width:560px){.toolgrid{grid-template-columns:repeat(2,1fr)}}
   .p-fajr{background:linear-gradient(135deg,#6d5cff,#3d8bff)}
   .p-neervia{background:linear-gradient(135deg,#0f2a4a,#0d1520)}
-  .p-clean{background:linear-gradient(135deg,#12b981,#0ea5a4)}
+  .p-clean{background:radial-gradient(120% 150% at 88% 0%,rgba(52,211,153,.30),rgba(52,211,153,0) 55%),linear-gradient(135deg,#02120E 0%,#07332A 55%,#0A5C46 100%)}
   .p-vdx{background:linear-gradient(135deg,#a855f7,#ec4899)}
   .panel.flip .txt{order:2}
   .panel.flip .vis{order:1}
@@ -399,14 +400,14 @@
       </div>
       <div class="vis">
         <div class="toolgrid">
-          <div class="ttool"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 4H6a2 2 0 0 0-2 2v3M15 4h3a2 2 0 0 1 2 2v3M20 15v3a2 2 0 0 1-2 2h-3M9 20H6a2 2 0 0 1-2-2v-3" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/><path d="M12 8.6l1.1 2.3 2.3 1.1-2.3 1.1L12 15.4l-1.1-2.3-2.3-1.1 2.3-1.1L12 8.6z" fill="#fff"/></svg><span>Watermark Remover</span></div>
-          <div class="ttool"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3" stroke="#fff" stroke-width="1.6"/><path d="M7 15.5h6M7 12h10" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg><span>Caption Generator</span></div>
-          <div class="ttool"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="5" width="15" height="14" rx="2.5" stroke="#fff" stroke-width="1.7"/><path d="M17.5 10.2l4-2.4v8.4l-4-2.4" stroke="#fff" stroke-width="1.7" stroke-linejoin="round"/></svg><span>Video Compressor</span></div>
-          <div class="ttool"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="4" width="19" height="16" rx="2.5" stroke="#fff" stroke-width="1.7"/><path d="M2.5 9h19M7 4v5M17 4v5" stroke="#fff" stroke-width="1.7"/></svg><span>Video to GIF</span></div>
-          <div class="ttool"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 18.5a3 3 0 1 1-2-2.8V5.8L20 3.6v11.9a3 3 0 1 1-2-2.8V7L9 8.8v9.7z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg><span>Video to MP3</span></div>
-          <div class="ttool"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5" stroke="#fff" stroke-width="1.7"/><path d="M10.8 18.6h2.4" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg><span>Vertical Converter</span></div>
-          <div class="ttool"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.6-5.6M20 12a8 8 0 0 1-13.6 5.6" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/><path d="M17.8 2.8v3.8h-3.8M6.2 21.2v-3.8h3.8" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Boomerang Maker</span></div>
-          <div class="ttool"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="4" width="19" height="16" rx="2.5" stroke="#fff" stroke-width="1.7"/><circle cx="12" cy="12" r="3.4" stroke="#fff" stroke-width="1.7"/></svg><span>Frame Extractor</span></div>
+          <a class="ttool" href="https://videowatermarkremover.pages.dev/" target="_blank" rel="noopener" aria-label="Open Watermark Remover"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 4H6a2 2 0 0 0-2 2v3M15 4h3a2 2 0 0 1 2 2v3M20 15v3a2 2 0 0 1-2 2h-3M9 20H6a2 2 0 0 1-2-2v-3" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/><path d="M12 8.6l1.1 2.3 2.3 1.1-2.3 1.1L12 15.4l-1.1-2.3-2.3-1.1 2.3-1.1L12 8.6z" fill="#fff"/></svg><span>Watermark Remover</span></a>
+          <a class="ttool" href="https://videowatermarkremover.pages.dev/video-caption-generator/" target="_blank" rel="noopener" aria-label="Open Caption Generator"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3" stroke="#fff" stroke-width="1.6"/><path d="M7 15.5h6M7 12h10" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg><span>Caption Generator</span></a>
+          <a class="ttool" href="https://videowatermarkremover.pages.dev/compress-video/" target="_blank" rel="noopener" aria-label="Open Video Compressor"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="5" width="15" height="14" rx="2.5" stroke="#fff" stroke-width="1.7"/><path d="M17.5 10.2l4-2.4v8.4l-4-2.4" stroke="#fff" stroke-width="1.7" stroke-linejoin="round"/></svg><span>Video Compressor</span></a>
+          <a class="ttool" href="https://videowatermarkremover.pages.dev/video-to-gif/" target="_blank" rel="noopener" aria-label="Open Video to GIF"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="4" width="19" height="16" rx="2.5" stroke="#fff" stroke-width="1.7"/><path d="M2.5 9h19M7 4v5M17 4v5" stroke="#fff" stroke-width="1.7"/></svg><span>Video to GIF</span></a>
+          <a class="ttool" href="https://videowatermarkremover.pages.dev/video-to-mp3/" target="_blank" rel="noopener" aria-label="Open Video to MP3"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 18.5a3 3 0 1 1-2-2.8V5.8L20 3.6v11.9a3 3 0 1 1-2-2.8V7L9 8.8v9.7z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg><span>Video to MP3</span></a>
+          <a class="ttool" href="https://videowatermarkremover.pages.dev/convert-video-to-vertical/" target="_blank" rel="noopener" aria-label="Open Vertical Converter"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5" stroke="#fff" stroke-width="1.7"/><path d="M10.8 18.6h2.4" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg><span>Vertical Converter</span></a>
+          <a class="ttool" href="https://videowatermarkremover.pages.dev/boomerang-video/" target="_blank" rel="noopener" aria-label="Open Boomerang Maker"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.6-5.6M20 12a8 8 0 0 1-13.6 5.6" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/><path d="M17.8 2.8v3.8h-3.8M6.2 21.2v-3.8h3.8" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Boomerang Maker</span></a>
+          <a class="ttool" href="https://videowatermarkremover.pages.dev/video-frame-extractor/" target="_blank" rel="noopener" aria-label="Open Frame Extractor"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="4" width="19" height="16" rx="2.5" stroke="#fff" stroke-width="1.7"/><circle cx="12" cy="12" r="3.4" stroke="#fff" stroke-width="1.7"/></svg><span>Frame Extractor</span></a>
         </div>
       </div>
     </article>
