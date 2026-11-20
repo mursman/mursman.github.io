@@ -48,7 +48,12 @@
   .anim-name .ins{display:inline-grid;grid-template-columns:0fr;transition:grid-template-columns 1.05s cubic-bezier(.22,1,.36,1);vertical-align:bottom}
   .anim-name.expanded .ins{grid-template-columns:1fr}
   .anim-name .inw{overflow:hidden;min-width:0;white-space:nowrap;display:inline-block}
-  .anim-name .l{display:inline-block;opacity:0;transform:translateY(.1em);background:linear-gradient(92deg,#ff8a3d,#ff5c8a 55%,#7c5cff);-webkit-background-clip:text;background-clip:text;color:transparent;transition:opacity .45s ease,transform .45s ease}
+  .anim-name .l{display:inline-block;opacity:0;transform:translateY(.1em);background:var(--ins-grad,linear-gradient(92deg,#ff8a3d,#ff5c8a 55%,#7c5cff));-webkit-background-clip:text;background-clip:text;color:transparent;transition:opacity .45s ease,transform .45s ease}
+  .anim-name .capswap{position:relative;display:inline-block}
+  .anim-name .capswap .lo{display:inline-block;transition:opacity .45s ease,transform .45s ease}
+  .anim-name .capswap .hi{position:absolute;left:0;top:0;opacity:0;transform:translateY(.14em);transition:opacity .45s ease,transform .45s ease}
+  .anim-name.expanded .capswap .lo{opacity:0;transform:translateY(-.14em)}
+  .anim-name.expanded .capswap .hi{opacity:1;transform:translateY(0)}
   .anim-name.expanded .l{opacity:1;transform:translateY(0)}
   .anim-name .d1{transition-delay:.10s}.anim-name .d2{transition-delay:.17s}.anim-name .d3{transition-delay:.24s}.anim-name .d4{transition-delay:.31s}.anim-name .d5{transition-delay:.38s}
   .anim-name .d6{transition-delay:.48s}.anim-name .d7{transition-delay:.55s}.anim-name .d8{transition-delay:.62s}
@@ -202,7 +207,7 @@
   <div class="bento">
     <div class="tile tile-name">
       <span class="avail"><i></i>Available for new work</span>
-      <h1 class="anim-name" aria-label="Murshedur Rahman"><span aria-hidden="true"><span class="seg">murs</span><span class="ins"><span class="inw"><span class="l d1">h</span><span class="l d2">e</span><span class="l d3">d</span><span class="l d4">u</span><span class="l d5">r</span></span></span><span class="gap"></span><span class="ins"><span class="inw"><span class="l d6">R</span><span class="l d7">a</span><span class="l d8">h</span></span></span><span class="seg">man</span><span class="dot">.</span></span></h1>
+      <h1 class="anim-name" aria-label="Murshedur Rahman"><span aria-hidden="true"><span class="seg"><span class="capswap"><span class="lo">m</span><span class="hi">M</span></span>urs</span><span class="ins"><span class="inw"><span class="l d1">h</span><span class="l d2">e</span><span class="l d3">d</span><span class="l d4">u</span><span class="l d5">r</span></span></span><span class="gap"></span><span class="ins"><span class="inw"><span class="l d6">R</span><span class="l d7">a</span><span class="l d8">h</span></span></span><span class="seg">man</span><span class="dot">.</span></span></h1>
       <div class="role">I paint <span class="g1">portraits</span>. I build <span class="g2">apps</span>.</div>
       <p>Pet portrait designer hand-painting realistic oil-style portraits since 2019 — and indie developer designing and shipping my own Android apps, end to end.</p>
       <div class="cta">
@@ -401,7 +406,17 @@
   t.innerHTML += t.innerHTML;
   var nm = document.querySelector('.anim-name');
   if (nm && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var grads = [
+      'linear-gradient(92deg,#ff8a3d,#ff5c8a 55%,#7c5cff)',
+      'linear-gradient(92deg,#3d8bff,#06b6d4 55%,#12b981)',
+      'linear-gradient(92deg,#ec4899,#a855f7 55%,#6366f1)',
+      'linear-gradient(92deg,#f59e0b,#84cc16 55%,#10b981)',
+      'linear-gradient(92deg,#f43f5e,#fb923c 55%,#facc15)'
+    ];
+    var gi = 0;
     var cycleName = function () {
+      nm.style.setProperty('--ins-grad', grads[gi % grads.length]);
+      gi++;
       nm.classList.add('expanded');
       setTimeout(function () { nm.classList.remove('expanded'); }, 4000);
     };
