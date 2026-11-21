@@ -1,0 +1,31 @@
+# mursman — Murshedur Rahman
+
+> Portfolio of Murshedur Rahman (mursman), a graphics designer and indie app creator based in Bangladesh, working worldwide. Open to freelance, part-time and full-time work, short or long term, remote.
+
+## About
+
+- Graphics designer since 2017, with 9+ years in Photoshop and Illustrator.
+- Pet Portrait Designer at Doggovinci.com (February 2020 – July 2021), creating Renaissance oil-painting-style pet portraits and themed template designs in Photoshop for thousands of customers.
+- Template Creator and Pet Portrait Designer at Nextgenpaws.com (2021 – present).
+- Image Annotator at RYU Data Center (December 2025 – present).
+- Asset contributor to the Canva library and other microstock sites for more than 4 years.
+- Indie app creator: designs products and UI/UX, writes the specs, directs AI tools that do the engineering, and tests everything on real devices.
+
+## Apps
+
+- FajrAlarm (https://fajr-alarm-thesix.web.app/): an Android alarm app for waking up for Fajr prayer, with a brutal alarm that will not stop until you are up, an accountability partner, prayer times, Quran and a Tasbeeh counter. On Google Play: https://play.google.com/store/apps/details?id=com.thesixbd.fajralarm
+- Neervia (https://neervia.web.app): send files between phone and PC without internet, cables or cloud — free, encrypted and resumable. Includes Neervia Remote, controlling a PC from a phone.
+- Clean Frame (https://videowatermarkremover.pages.dev): free online watermark remover for videos and images — removes visible logos and marks, including Veo, Kling and Runway watermarks, from media you own. No sign-up.
+- VectorDrawableX (https://github.com/mursman/VectorDrawableX): an Android app that converts SVG artwork into clean, Android-ready VectorDrawable XML, with compatibility checks and an Icon Fit Studio.
+
+## Design work
+
+- 24 design projects on Behance (https://www.behance.net/mursman): 3D renders, logo design, book covers, t-shirt designs, social media design, templates and an AR filter.
+- Pet portrait styles: Renaissance oil-painting style, movie-inspired themes, minimal line art, black-and-white charcoal style, and group/family portraits.
+
+## Contact
+
+- Email: murshmans@gmail.com
+- Behance: https://www.behance.net/mursman
+- GitHub: https://github.com/mursman
+- LinkedIn: https://www.linkedin.com/in/mursman/
